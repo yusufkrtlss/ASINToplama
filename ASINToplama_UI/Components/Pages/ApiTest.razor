@@ -1,0 +1,85 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+@using ASINToplama_UI.Services
+@using ASINToplama_UI.Models
+@inject IApiClient Api
+
+<h3>Giriş</h3>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input class="form-control" @bind="_email" autocomplete="username" />
+    </div>
+    <div class="col-md-6">
+        <label class="form-label">Parola</label>
+        <input class="form-control" type="password" @bind="_password" autocomplete="current-password" />
+    </div>
+</div>
+
+<div class="mt-3">
+    <button class="btn btn-primary" @onclick="DoLogin" disabled="@_busy">
+        @if (_busy)
+        {
+            <span>Giriş yapılıyor...</span>
+        }
+        else
+        {
+            <span>Giriş</span>
+        }
+    </button>
+</div>
+
+@if (!string.IsNullOrWhiteSpace(_error))
+{
+    <div class="alert alert-danger mt-3">@_error</div>
+}
+
+<div class="mt-4">
+    <label class="form-label">Dönen Değerler (JSON)</label>
+    <textarea class="form-control" rows="10" readonly>@_responseText</textarea>
+</div>
+
+@code {
+    private string _email = "";
+    private string _password = "";
+    private bool _busy = false;
+    private string _error = "";
+    private string _responseText = "";
+
+    private async Task DoLogin()
+    {
+        _error = "";
+        _responseText = "";
+        if (string.IsNullOrWhiteSpace(_email) || string.IsNullOrWhiteSpace(_password))
+        {
+            _error = "Email ve parola zorunludur.";
+            return;
+        }
+
+        _busy = true;
+        try
+        {
+            var res = await Api.LoginAsync(_email, _password);
+            if (res is null)
+            {
+                _error = "Giriş başarısız. Email/parolayı kontrol edin.";
+                return;
+            }
+
+            // JSON olarak alt kutuya yaz
+            _responseText = System.Text.Json.JsonSerializer.Serialize(
+                res,
+                new System.Text.Json.JsonSerializerOptions { WriteIndented = true, PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase }
+            );
+        }
+        catch (Exception ex)
+        {
+            _error = "Hata: " + ex.Message;
+        }
+        finally
+        {
+            _busy = false;
+        }
+    }
+}

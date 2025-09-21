@@ -57,7 +57,6 @@ namespace ASINToplama_BusinessLayer.Concrete
             var existing = await _repo.GetByIdAsync(id, ct);
             if (existing is null) return false;
 
-            // Soft delete: repo.Remove BaseEntity tespit edip IsDeleted=true işaretliyor
             _repo.Remove(existing);
             await _uow.SaveChangesAsync(ct);
             return true;

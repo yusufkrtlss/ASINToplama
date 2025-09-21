@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35521.163 d17.12
+VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_API", "ASINToplama_API\ASINToplama_API.csproj", "{AE3C8593-91D5-48D2-87F8-B67517CF7F31}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_BusinessLayer", "ASINToplama_BusinessLayer\ASINToplama_BusinessLayer.csproj", "{A7DE8E18-BB2D-4D12-8B2B-09CCA06CB335}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_Tests", "ASINToplama_Tests\ASINToplama_Tests.csproj", "{36941B93-E74E-4202-90C0-06EEAD8CD23C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_UI", "ASINToplama_UI\ASINToplama_UI.csproj", "{839A61DA-86C0-46C2-BCA3-B7CEA8FADD8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{839A61DA-86C0-46C2-BCA3-B7CEA8FADD8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839A61DA-86C0-46C2-BCA3-B7CEA8FADD8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839A61DA-86C0-46C2-BCA3-B7CEA8FADD8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839A61DA-86C0-46C2-BCA3-B7CEA8FADD8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
