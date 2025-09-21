@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_DataAccessLayer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_BusinessLayer", "ASINToplama_BusinessLayer\ASINToplama_BusinessLayer.csproj", "{A7DE8E18-BB2D-4D12-8B2B-09CCA06CB335}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASINToplama_Tests", "ASINToplama_Tests\ASINToplama_Tests.csproj", "{36941B93-E74E-4202-90C0-06EEAD8CD23C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A7DE8E18-BB2D-4D12-8B2B-09CCA06CB335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7DE8E18-BB2D-4D12-8B2B-09CCA06CB335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7DE8E18-BB2D-4D12-8B2B-09CCA06CB335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36941B93-E74E-4202-90C0-06EEAD8CD23C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
